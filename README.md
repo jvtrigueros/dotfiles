@@ -1,25 +1,36 @@
-# dotfiles
+dotfiles
+=======
 
 It seems like having a dotfiles repo is a good idea so I'm deciding to give it a shot. 
-
 At the moment I'm putting this together on **Ubuntu 13.10 x64**
 
-# Pre-requisites
+For each of the sections below, there will be a corresponding folder. This way these can be called independently of each other, say for instance I want to _only_ symlink my configuration files into my home directory, but I don't need to install or set up anything else, then I would just call the script associated with the symlink folder.
+
+Setup
+-------
+
 There are some things that must be installed before we can even continue, here's the list:
 
 * build-essential
 * git
 
-# Install
+Install
+-------
+
 git
 
-# Symlink
+Symlink
+-------
+
 .gitconfig
 .vimrc
 
-# alias
+alias
+-----
 
-# Scratchpad
+Scratchpad
+----------
+
 clipit
 meld
 git extras
