@@ -1,0 +1,57 @@
+filetype off
+set nocompatible
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage the bundles
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-markdown'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'Lokaltog/powerline'
+Bundle 'ctrlp.vim'
+Bundle 'fugitive.vim'
+
+filetype plugin indent on
+
+" set new leader
+let mapleader = ","
+
+syntax on
+set number
+set background=dark
+set tabstop=4
+set smartindent
+set shiftwidth=4
+set smartcase
+set ignorecase
+set expandtab
+set softtabstop=4
+set hls             " Highlights searched text
+set showcmd         " Shows what command you have typed
+set ruler
+set showmatch       " Show matching bracket
+set laststatus=2    " Show statusbar
+" Add mouse cool stuff ( idk )
+set mouse=a
+set backspace=indent,eol,start
+set shellslash
+
+" numbers.vim
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
+
+" ctrlp.vim
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
+
+"Save Folds
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+set viewoptions=folds
