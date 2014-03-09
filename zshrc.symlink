@@ -15,15 +15,15 @@ COMPLETION_WAITING_DOTS="true"
 antigen use oh-my-zsh
 
 antigen bundles <<EOBUNDLES
+    arialdomartini/oh-my-git
     command-not-found
-
     extract
-
     git
     git-extras
-    arialdomartini/oh-my-git
-    
+    tmux
+    vi-mode
     zsh-users/zsh-syntax-highlighting
+    z
 EOBUNDLES
 
 antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
