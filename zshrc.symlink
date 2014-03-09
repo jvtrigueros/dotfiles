@@ -1,5 +1,4 @@
 # Paths
-export ZSH=$HOME/.oh-my-zsh
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 source $HOME/.antigen/antigen.zsh
@@ -30,8 +29,6 @@ EOBUNDLES
 antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
 
 antigen apply
-
-# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 alias zshconfig="vim ~/.zshrc"
