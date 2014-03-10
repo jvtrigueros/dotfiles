@@ -8,7 +8,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-markdown'
 Bundle 'flazz/vim-colorschemes'
-Bundle 'myusuf3/numbers.vim'
 Bundle 'Lokaltog/powerline'
 Bundle 'ctrlp.vim'
 Bundle 'fugitive.vim'
@@ -37,10 +36,6 @@ set laststatus=2    " Show statusbar
 set mouse=a
 set backspace=indent,eol,start
 set shellslash
-
-" numbers.vim
-nnoremap <F3> :NumbersToggle<CR>
-nnoremap <F4> :NumbersOnOff<CR>
 
 " ctrlp.vim
 let g:ctrlp_map = '<Leader>t'
