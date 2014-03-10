@@ -10,6 +10,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'Lokaltog/powerline'
 Bundle 'ctrlp.vim'
+Bundle 'tComment'
 Bundle 'fugitive.vim'
 
 filetype plugin indent on
