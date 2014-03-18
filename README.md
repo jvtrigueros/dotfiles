@@ -32,6 +32,8 @@ alias
 Scratchpad
 ----------
 
+CONFIG_PATH=$(cd "$(dirname "$0")" && pwd)
+
 clipit
 meld
 git extras
