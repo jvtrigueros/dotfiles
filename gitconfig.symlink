@@ -27,4 +27,4 @@
 	email = j.v.trigueros@gmail.com
 
 [push]
-	default = upstream
+	default = matching
