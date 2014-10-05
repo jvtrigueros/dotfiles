@@ -19,6 +19,10 @@ Install
 -------
 
 ~~git~~
+oracle-java
+git
+z
+zsh
 
 Symlink
 -------
