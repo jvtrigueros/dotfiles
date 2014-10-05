@@ -54,11 +54,5 @@ autocmd BufWinEnter *.* silent loadview
 set viewoptions=folds
 
 " Change cursor in vim, may have to tweak for gnome-term
-let profile = "base-16-solarized-dark"
-if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/".profile."/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/".profile."/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/".profile."/cursor_shape block"
-endif
 inoremap <special> <Esc> <Esc>hl
 set guicursor+=i:blinkwait0
