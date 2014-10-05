@@ -1,18 +1,18 @@
 filetype off
 set nocompatible
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage the bundles
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-markdown'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'Lokaltog/powerline'
-Bundle 'ctrlp.vim'
-Bundle 'tComment'
-Bundle 'fugitive.vim'
+Plugin 'gmarik/vundle'
+Plugin 'Lokaltog/powerline'
+Plugin 'ctrlp.vim'
+Plugin 'tComment'
+Plugin 'Valloric/YouCompleteMe'
 
+
+call vundle#end()
 filetype plugin indent on
 
 " set new leader
