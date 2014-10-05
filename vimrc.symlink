@@ -6,10 +6,8 @@ call vundle#begin()
 
 " Let Vundle manage the bundles
 Plugin 'gmarik/vundle'
-Plugin 'Lokaltog/powerline'
-Plugin 'ctrlp.vim'
 Plugin 'tComment'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ctrlp.vim'
 
 
 call vundle#end()
