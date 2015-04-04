@@ -36,6 +36,8 @@ set laststatus=2    " Show statusbar
 set mouse=a
 set backspace=indent,eol,start
 set shellslash
+set noundofile
+set nobackup
 
 " ctrlp.vim
 let g:ctrlp_map = '<Leader>t'
@@ -52,5 +54,9 @@ autocmd BufWinEnter *.* silent loadview
 set viewoptions=folds
 
 " Change cursor in vim, may have to tweak for gnome-term
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
 inoremap <special> <Esc> <Esc>hl
 set guicursor+=i:blinkwait0

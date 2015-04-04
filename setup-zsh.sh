@@ -1,6 +1,4 @@
 #!/bin/bash
-sudo apt-get install -y zsh
-
 echo Installing Antigen
 git clone https://github.com/zsh-users/antigen.git $HOME/.antigen
 
