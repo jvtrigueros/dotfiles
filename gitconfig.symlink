@@ -2,7 +2,7 @@
 	branch = auto
 	diff = auto
 	status = auto
-    
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -27,4 +27,4 @@
 	email = j.v.trigueros@gmail.com
 
 [push]
-	default = matching
+	default = simple
