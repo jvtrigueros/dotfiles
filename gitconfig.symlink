@@ -21,10 +21,11 @@
 
 [core]
     editor = vim
+	filemode = false
 
 [user]
 	name = Jose V. Trigueros
 	email = j.v.trigueros@gmail.com
 
 [push]
-	default = simple
+	default = upstream
