@@ -1,0 +1,70 @@
+set nocompatible
+filetype off
+ 
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin('$HOME/.vim/bundle/')
+ 
+" Let Vundle manage the bundles
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'ctrlp.vim'
+Plugin 'tComment'
+Plugin 'vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+ 
+call vundle#end()
+filetype plugin indent on
+ 
+" set new leader
+let mapleader = ","
+
+syntax on
+set number
+set nowrap
+set background=dark
+set tabstop=4
+set smartindent
+set shiftwidth=4
+set smartcase
+set ignorecase
+set expandtab
+set softtabstop=4
+set hls             " Highlights searched text
+set showcmd         " Shows what command you have typed
+set ruler
+set showmatch       " Show matching bracket
+set laststatus=2    " Show statusbar
+" Add mouse cool stuff ( idk )
+set mouse=a
+set backspace=indent,eol,start
+set shellslash
+
+" save vim backups not here
+set dir=~/.vimswap//,/var/tmp//,/tmp//,.
+
+" ctrlp.vim
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
+
+" vim-airline
+let g:airline_theme='violet'
+
+"Save Folds
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+set viewoptions=folds
+
+inoremap <special> <Esc> <Esc>hl
+" set t_Co=256
+set term=screen-256color
+set guicursor+=i:blinkwait0
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
+
