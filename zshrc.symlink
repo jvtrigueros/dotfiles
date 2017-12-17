@@ -1,35 +1,57 @@
 # Paths
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export LEIN_JAVA_CMD="$(which java)"
 
-source $HOME/.antigen/antigen.zsh
+__git_files () {
+    _wanted files expl 'local files' _files
+}
+
+# Ansible Settings
+ANSIBLE=/opt/ansible
+export PATH=$PATH:$ANSIBLE/bin
+export PYTHONPATH=$ANSIBLE/lib
+export ANSIBLE_LIBRARY=$ANSIBLE/library
+# source $HOME/.antigen/antigen.zsh
+source $HOME/.zgen/zgen.zsh
 
 # Uncomment to change how often before auto-updates occur? (in days)
-export UPDATE_ZSH_DAYS=1
+# export UPDATE_ZSH_DAYS=1
 
 # Uncomment following line if you want to disable command autocorrection
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
+if ! zgen saved; then
+    echo "Creating a zgen save"
+    zgen oh-my-zsh
+# antigen use oh-my-zsh
 
-antigen use oh-my-zsh
+# arialdomartini/oh-my-git
+# command-not-found
+# zsh-users/zsh-syntax-highlighting
+# z
+    zgen oh-my-zsh plugins/extract
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/git-extras
+    zgen oh-my-zsh plugins/tmux
+    zgen oh-my-zsh plugins/vi-mode
+    zgen oh-my-zsh plugins/z
+# antigen bundles <<EOBUNDLES
+#     extract
+#     git
+#     git-extras
+#     tmux
+#     vi-mode
+#     z
+# EOBUNDLES
 
-antigen bundles <<EOBUNDLES
-    arialdomartini/oh-my-git
-    command-not-found
-    extract
-    git
-    git-extras
-    tmux
-    vi-mode
-    zsh-users/zsh-syntax-highlighting
-    z
-EOBUNDLES
+# antigen theme bira
 
-antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
-
-antigen apply
-
+# antigen apply
+    zgen oh-my-zsh themes/bira
+    zgen save
+fi
 # User configuration
 alias zshconfig="vim ~/.zshrc"
 
@@ -40,3 +62,8 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/Jose/.sdkman"
+[[ -s "/home/Jose/.sdkman/bin/sdkman-init.sh" ]] && source "/home/Jose/.sdkman/bin/sdkman-init.sh"
+
