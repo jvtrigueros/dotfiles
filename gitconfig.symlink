@@ -1,31 +1,39 @@
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto
 
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 
 [core]
-    editor = vim
-	filemode = false
+  editor = vim
+  filemode = false
+  excludesfile = C:\\Users\\jvtrigueros\\.gitignore
+  autocrlf = input
+
+[branch]
+  autosetuprebase = always
+
+[rerere]
+  enabled = 1
 
 [user]
-	name = Jose V. Trigueros
-	email = j.v.trigueros@gmail.com
+  name = Jose V. Trigueros
+  email = j.v.trigueros@gmail.com
 
 [push]
-	default = upstream
+  default = upstream
