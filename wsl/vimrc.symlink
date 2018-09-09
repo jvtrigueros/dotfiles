@@ -21,7 +21,7 @@ let mapleader = ","
 syntax on
 set number
 set nowrap
-set background=dark
+set background=light
 set tabstop=4
 set smartindent
 set shiftwidth=4
