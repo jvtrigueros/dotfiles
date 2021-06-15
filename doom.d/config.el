@@ -99,10 +99,10 @@
        (:when (featurep! :tools magit)
         :desc "Push" "p" #'magit-push)))
 
-(after! git-rebase-mode
+(after! git-rebase
   (map!
    :map git-rebase-mode-map
-   "S-SPC" #'git-rebase-show-or-scroll-up))
+   "S-SPC" #'magit-diff-show-or-scroll-up))
 
 ;; Still looking for a way to make this work, commenting in the meantime
 ;; (after! lispyville-mode
