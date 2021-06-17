@@ -118,3 +118,9 @@
 ;; Load keys and certificates from auth-sources
 (setq network-stream-use-client-certificates t)
 
+;; Make buffer names unique: https://www.gnu.org/software/emacs/manual/html_node/emacs/Uniquify.html
+;; Source: http://pragmaticemacs.com/emacs/uniquify-your-buffer-names/
+(setq uniquify-buffer-name-style 'forward)
+(setq uniquify-separator "/")
+(setq uniquify-after-kill-buffer-p t)    ; rename after killing uniquified
+(setq uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
