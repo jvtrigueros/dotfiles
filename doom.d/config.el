@@ -91,7 +91,12 @@
 (set-formatter! 'cljstyle "cljstyle pipe" :modes '(clojure-mode))
 
 (after! clojure-mode
-  (setq! clojure-align-separator 'entire))
+  (setq! clojure-align-separator 'entire)
+  (map! (:localleader
+        (:map (clojure-mode-map clojurescript-mode-map)
+             (:prefix ("e" . "eval")
+                "p" #'cider-eval-sexp-at-point)))))
+
 
 ;; Add push git options
 (map! :leader
