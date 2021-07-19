@@ -99,9 +99,10 @@
 
 ;; Add push git options
 (map! :leader
-      (:prefix-map ("g" . "git")
-       (:when (featurep! :tools magit)
-        :desc "Push" "p" #'magit-push)))
+      (:when (featurep! :tools magit)
+       (:prefix-map ("g" . "git")
+        :desc "Push" "p" #'magit-push
+        :desc "Amend" "a" #'magit-commit-amend)))
 
 (after! git-rebase
   (map!
