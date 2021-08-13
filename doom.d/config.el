@@ -97,10 +97,6 @@
         :desc "Push" "p" #'magit-push
         :desc "Amend" "a" #'magit-commit-amend)))
 
-;; Still looking for a way to make this work, commenting in the meantime
-;; (after! lispyville-mode
-;;   (lispyville-mode-line-string))
-
 ;; Load keys and certificates from auth-sources
 (setq auth-sources '("~/.authinfo"))
 (setq network-stream-use-client-certificates t)
