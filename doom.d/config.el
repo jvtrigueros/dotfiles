@@ -104,13 +104,6 @@
 ;; (after! lispyville-mode
 ;;   (lispyville-mode-line-string))
 
-;; macOS
-(when IS-MAC
-  (setq! mac-right-option-modifier 'meta)
-
-  ;; Configure the location of Omnisharp for lsp server
-  (setq! omnisharp-server-executable-path "/usr/local/bin/omnisharp"))
-
 ;; Load keys and certificates from auth-sources
 (setq network-stream-use-client-certificates t)
 
@@ -120,3 +113,10 @@
 (setq uniquify-separator "/")
 (setq uniquify-after-kill-buffer-p t)    ; rename after killing uniquified
 (setq uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
+
+;; macOS
+(when IS-MAC
+  (setq! mac-right-option-modifier 'meta)
+
+  ;; Configure the location of Omnisharp for lsp server
+  (setq! omnisharp-server-executable-path "/usr/local/bin/omnisharp"))
