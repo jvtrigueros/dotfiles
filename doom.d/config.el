@@ -71,6 +71,9 @@
         beacon-blink-when-point-moves-vertically 10))
 
 (after! magit
+  (map!
+   :map git-rebase-mode-map
+   "S-SPC" #'magit-diff-show-or-scroll-up))
 
 ;; Change default avy-keys to be DVORAK friendly
 (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
@@ -93,11 +96,6 @@
        (:prefix-map ("g" . "git")
         :desc "Push" "p" #'magit-push
         :desc "Amend" "a" #'magit-commit-amend)))
-
-(after! git-rebase
-  (map!
-   :map git-rebase-mode-map
-   "S-SPC" #'magit-diff-show-or-scroll-up))
 
 ;; Still looking for a way to make this work, commenting in the meantime
 ;; (after! lispyville-mode
