@@ -54,7 +54,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(add-load-path! "./elisp")
 
 (use-package! super-save
   :config
@@ -70,14 +69,6 @@
                          bg))
         beacon-blink-when-buffer-changes t
         beacon-blink-when-point-moves-vertically 10))
-
-(use-package! engine-mode
-  :config
-  (engine-mode t)
-  (map! :leader
-        (:prefix-map ("s" . "search")
-         :desc "engine-mode" "e" #'engine-mode-prefixed-map))
-  (load "engines"))
 
 (after! magit
   (setq auth-sources '("~/.authinfo")))

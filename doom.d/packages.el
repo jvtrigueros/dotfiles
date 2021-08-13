@@ -58,5 +58,3 @@
 (package! lsp-treemacs)
 
 (package! beacon)
-
-(package! engine-mode)
