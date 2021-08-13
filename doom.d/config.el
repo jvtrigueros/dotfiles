@@ -71,7 +71,6 @@
         beacon-blink-when-point-moves-vertically 10))
 
 (after! magit
-  (setq auth-sources '("~/.authinfo")))
 
 ;; Change default avy-keys to be DVORAK friendly
 (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
@@ -105,6 +104,7 @@
 ;;   (lispyville-mode-line-string))
 
 ;; Load keys and certificates from auth-sources
+(setq auth-sources '("~/.authinfo"))
 (setq network-stream-use-client-certificates t)
 
 ;; Make buffer names unique: https://www.gnu.org/software/emacs/manual/html_node/emacs/Uniquify.html
