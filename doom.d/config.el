@@ -118,9 +118,8 @@
 (setq uniquify-after-kill-buffer-p t)    ; rename after killing uniquified
 (setq uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
 
-;; macOS
-(when IS-MAC
-  (setq! mac-right-option-modifier 'meta)
-
-  ;; Configure the location of Omnisharp for lsp server
-  (setq! omnisharp-server-executable-path "/usr/local/bin/omnisharp"))
+;; ispell, for some reason this doesn't get set
+(after! ispell
+  (setq! ispell-dictionary "en")
+  (setq! ispell-personal-dictionary
+         (expand-file-name "ispell/jvtrigueros.pws" doom-etc-dir)))
