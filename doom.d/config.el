@@ -123,3 +123,6 @@
   (setq! ispell-dictionary "en")
   (setq! ispell-personal-dictionary
          (expand-file-name "ispell/jvtrigueros.pws" doom-etc-dir)))
+
+;; Specify location of Language Tool when installed with LinuxBrew
+(setq! langtool-bin "/home/linuxbrew/.linuxbrew/opt/languagetool/bin/languagetool")
