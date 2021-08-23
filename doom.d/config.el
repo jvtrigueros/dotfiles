@@ -90,6 +90,15 @@
             ("e" . "eval")
             "p" #'cider-eval-sexp-at-point)))))
 
+(use-package! cider
+  :after clojure-mode
+  :config
+  (set-lookup-handlers! 'cider-mode nil))
+
+(use-package! clj-refactor
+  :after clojure-mode
+  :config
+  (set-lookup-handlers! 'clj-refactor-mode nil))
 
 ;; Add push git options
 (map! :leader
