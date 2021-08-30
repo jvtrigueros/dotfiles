@@ -58,3 +58,5 @@
 (package! lsp-treemacs)
 
 (package! beacon)
+
+(package! just-mode)

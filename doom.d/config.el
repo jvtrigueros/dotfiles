@@ -126,3 +126,5 @@
 
 ;; Specify location of Language Tool when installed with LinuxBrew
 (setq! langtool-bin "/home/linuxbrew/.linuxbrew/opt/languagetool/bin/languagetool")
+
+(use-package! just-mode)
