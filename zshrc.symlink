@@ -5,8 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export GOPATH=$HOME/go
-
 export EDITOR=nvim
 export DISABLE_AUTO_TITLE=true
 
@@ -40,8 +38,6 @@ bindkey -s '^[OM' '^M' # This is a workaround for numkeypad: https://github.com/
 
 # vi-mode mode change timeout to 0.1 seconds
 export KEYTIMEOUT=0.1
-
-source /Users/i871486/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # History
 HISTSIZE=10000000
