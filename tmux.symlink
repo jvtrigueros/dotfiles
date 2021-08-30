@@ -1,19 +1,31 @@
-set -g mouse on
+set -g base-index 1
+set -g pane-base-index 1
 
-set-window-option -g mode-keys vi
-
-# Status bar
-set-option -g status on
-set -g status-interval 5
-
-set-option -g status-position top
+set-option -g mouse on
 set-option -g repeat-time 0
+set-option -g status-position top
 
-set -sg escape-time 0
+# List of plugins
+set -g @tpm_plugins '              \
+    caiogondim/maglev              \
+    nhdaly/tmux-better-mouse-mode  \
+    tmux-plugins/tmux-continuum    \
+    tmux-plugins/tmux-copycat      \
+    tmux-plugins/tmux-cpu          \
+    tmux-plugins/tmux-open         \
+    tmux-plugins/tmux-pain-control \
+    tmux-plugins/tmux-resurrect    \
+    tmux-plugins/tmux-sensible     \
+    tmux-plugins/tmux-yank         \
+    tmux-plugins/tpm               \
+'
 
-set -g @plugin 'caiogondim/maglev'
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-yank'
-set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @continuum-restore 'on'
 
+# tmux-better-mouse-mode settings
+set -g @scroll-without-changing-pane "on"
+set -g @scroll-speed-num-lines-per-scroll "1"
+
+# Initialize TMUX plugin manager
 run '~/.tmux/plugins/tpm/tpm'
+
