@@ -5,6 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export PATH=/opt/homebrew/bin:$PATH
 export EDITOR=nvim
 export DISABLE_AUTO_TITLE=true
 
@@ -70,16 +71,15 @@ compdef _bb_tasks bb
 
 ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 __init_sdkman() {
-  export SDKMAN_DIR="/Users/i871486/.sdkman"
-  [[ -s "/Users/i871486/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/i871486/.sdkman/bin/sdkman-init.sh"
+  export SDKMAN_DIR="$HOME/.sdkman"
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 }
 
 __init_fzf() {
-  export FZF_BASE=/usr/local/opt/fzf
-  [[ $- == *i* ]] && source "${FZF_BASE}/shell/completion.zsh" 2> /dev/null
-  source "${FZF_BASE}/shell/key-bindings.zsh"
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
   export FZF_DEFAULT_COMMAND='rg --files --hidden'
 }
 
 __init_fzf
 __init_sdkman
+
