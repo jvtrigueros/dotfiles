@@ -1,0 +1,71 @@
+[user]
+  name = Jose V. Trigueros
+
+[core]
+  editor = nvim
+  pager = delta
+  excludesfile = ~/.gitignore_global
+
+[alias]
+  serve = !git daemon --reuseaddr --verbose --base-path=. --enable=receive-pack --export-all ./.git
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+
+[rebase]
+  autoStash = true
+  stat = true
+
+[pull]
+  rebase = true
+
+[status]
+  showUntrackedFiles = all
+
+[diff "clojure"]
+  xfuncname = (^\\(.*|\\s*\\(defn.*)
+
+[delta]
+  features = side-by-side line-numbers decorations
+  syntax-theme = Dracula
+  plus-style = syntax "#003800"
+  minus-style = syntax "#3f0001"
+
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
+
+[delta "line-numbers"]
+  line-numbers-left-style = cyan
+  line-numbers-right-style = cyan
+  line-numbers-minus-style = 124
+  line-numbers-plus-style = 28
+
+[rerere]
+  enabled = true
