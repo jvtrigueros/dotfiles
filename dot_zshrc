@@ -80,6 +80,9 @@ __init_fzf() {
   export FZF_DEFAULT_COMMAND='rg --files --hidden'
 }
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+
 __init_fzf
 __init_sdkman
 
