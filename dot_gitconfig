@@ -69,3 +69,7 @@
 
 [rerere]
   enabled = true
+
+[github]
+  user = jvtrigueros
+
