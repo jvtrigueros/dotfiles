@@ -101,11 +101,16 @@
   (set-lookup-handlers! 'clj-refactor-mode nil))
 
 ;; Add push git options
-(map! :leader
-      (:when (featurep! :tools magit)
-       (:prefix-map ("g" . "git")
-        :desc "Push" "p" #'magit-push
-        :desc "Amend" "a" #'magit-commit-amend)))
+(after! magit
+  (map! :leader
+        (:when (featurep! :tools magit)
+         (:prefix-map ("g" . "git")
+          :desc "Push" "p" #'magit-push
+          :desc "Amend" "a" #'magit-commit-amend)))
+  (map!
+   :after magit
+   :map magit-diff-section-base-map
+   "<S-return>" #'magit-diff-visit-file-other-window))
 
 ;; Load keys and certificates from auth-sources
 (setq auth-sources '("~/.authinfo"))
