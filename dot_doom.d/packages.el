@@ -60,3 +60,6 @@
 (package! beacon)
 
 (package! just-mode)
+
+(package! free-keys)
+
