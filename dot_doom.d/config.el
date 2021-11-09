@@ -100,6 +100,9 @@
   :config
   (set-lookup-handlers! 'clj-refactor-mode nil))
 
+(after! clojure-mode
+  (sayid-setup-package))
+
 ;; Add push git options
 (after! magit
   (map! :leader
