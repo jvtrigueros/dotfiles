@@ -141,3 +141,7 @@
 (after! good-scroll
   (good-scroll-mode 1))
 
+;; Allow scrolling sideways with the trackpad
+(setq! mouse-wheel-flip-direction t
+       mouse-wheel-tilt-scroll t)
+
