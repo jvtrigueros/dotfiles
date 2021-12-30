@@ -83,12 +83,16 @@
 (set-formatter! 'cljstyle "cljstyle pipe" :modes '(clojure-mode))
 
 (after! clojure-mode
-  (setq! clojure-align-separator 'entire)
-  (map! (:localleader
-          (:map (clojure-mode-map clojurescript-mode-map)
-           (:prefix
-            ("e" . "eval")
-            "p" #'cider-eval-sexp-at-point)))))
+  ;; Disable documentation pop, can still be summoned with M-x lsp-ui-doc-show
+  (setq lsp-ui-doc-show-with-cursor nil)
+  (setq lsp-ui-doc-show-with-mouse t))
+
+;;   (setq! clojure-align-separator 'entire)
+;;   (map! (:localleader
+;;           (:map (clojure-mode-map clojurescript-mode-map)
+;;            (:prefix
+;;             ("e" . "eval")
+;;             "p" #'cider-eval-sexp-at-point)))))
 
 (use-package! cider
   :after clojure-mode
