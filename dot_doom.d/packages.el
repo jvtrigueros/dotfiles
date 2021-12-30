@@ -63,3 +63,4 @@
 
 (package! free-keys)
 
+(package! good-scroll)

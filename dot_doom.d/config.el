@@ -138,7 +138,6 @@
 
 (use-package! just-mode)
 
-;; (after! parinfer-rust-mode
-;;   (when (featurep! :editor parinfer +rust)
-;;     (setq parinfer-rust-library
-;;           (concat user-emacs-directory "parinfer-rust/parinfer-rust-darwin.so"))))
+(after! good-scroll
+  (good-scroll-mode 1))
+
