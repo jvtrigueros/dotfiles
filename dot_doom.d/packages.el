@@ -63,4 +63,3 @@
 
 (package! free-keys)
 
-(package! sayid)
