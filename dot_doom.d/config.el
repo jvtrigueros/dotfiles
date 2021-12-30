@@ -145,3 +145,7 @@
 (setq! mouse-wheel-flip-direction t
        mouse-wheel-tilt-scroll t)
 
+;; Formatting for JSON files
+(add-hook!
+ json-mode-hook
+ (setq! js-indent-level 2))
