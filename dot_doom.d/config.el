@@ -99,7 +99,8 @@
 (use-package! cider
   :after clojure-mode
   :config
-  (set-lookup-handlers! 'cider-mode nil))
+  (set-lookup-handlers! 'cider-mode nil)
+  (setq cider-save-file-on-load t))
 
 (use-package! clj-refactor
   :after clojure-mode
