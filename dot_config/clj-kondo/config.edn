@@ -1,0 +1,1 @@
+{:lint-as {taoensso.timbre/info taoensso.timbre/log!}}
