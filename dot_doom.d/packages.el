@@ -64,3 +64,6 @@
 (package! free-keys)
 
 (package! good-scroll)
+
+(package! evil-cleverparens)
+

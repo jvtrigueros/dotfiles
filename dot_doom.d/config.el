@@ -87,6 +87,8 @@
   (setq lsp-ui-doc-show-with-cursor nil)
   (setq lsp-ui-doc-show-with-mouse t))
 
+(add-hook 'clojure-mode-hook #'evil-cleverparens-mode)
+
 ;;   (setq! clojure-align-separator 'entire)
 ;;   (map! (:localleader
 ;;           (:map (clojure-mode-map clojurescript-mode-map)
