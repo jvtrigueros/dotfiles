@@ -73,3 +73,6 @@
 [github]
   user = jvtrigueros
 
+[url "git@github.com:yummly/"]
+  insteadOf = "https://github.com/yummly/"
+
