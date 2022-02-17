@@ -151,3 +151,10 @@
 (add-hook!
  json-mode-hook
  (setq! js-indent-level 2))
+
+;; Configure TabNine
+(after! company
+  (setq +lsp-company-backends '(company-tabnine :separate company-capf company-yasnippet))
+  (setq company-show-numbers t)
+  (setq company-idle-delay 0))
+
