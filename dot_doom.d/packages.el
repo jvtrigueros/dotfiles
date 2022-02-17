@@ -70,3 +70,7 @@
 (package! company-tabnine
           :recipe (:host github
                    :repo "TommyX12/company-tabnine"))
+
+(package! chezmoi
+          :recipe (:host github
+                   :repo "tuh8888/chezmoi.el"))
