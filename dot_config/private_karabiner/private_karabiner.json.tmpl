@@ -46,7 +46,7 @@
             ]
           },
           {
-            "description": "Caps Lock to Command (all apps except iTerm and emacs)",
+            "description": "Caps Lock to Left Command (all apps except iTerm and emacs)",
             "manipulators": [
               {
                 "conditions": [
@@ -75,8 +75,9 @@
               }
             ]
           },
+{{- /*
           {
-            "description": "A -> Command only if held.",
+            "description": "(disabled) A -> Command only if held.",
             "manipulators": [
               {
                 "parameters": {
@@ -93,7 +94,7 @@
                 },
                 "to_if_held_down": [
                   {
-                    "key_code": "left_command"
+                    "key_code": "a"
                   }
                 ],
                 "to_if_alone": [
@@ -106,7 +107,7 @@
             ]
           },
           {
-            "description": "; -> Command only if held.",
+            "description": "(disabled) ; -> Command only if held.",
             "manipulators": [
               {
                 "parameters": {
@@ -123,7 +124,7 @@
                 },
                 "to_if_held_down": [
                   {
-                    "key_code": "left_command"
+                    "key_code": "semicolon"
                   }
                 ],
                 "to_if_alone": [
@@ -177,6 +178,7 @@
               }
             ]
           },
+*/}}
           {
             "description": "ErgoDox: Left Control -> Left Command (all apps except iTerm, Emacs)",
             "manipulators": [
