@@ -141,6 +141,8 @@
 
 (use-package! just-mode)
 
+(use-package! chezmoi)
+
 ;; Allow scrolling sideways with the trackpad
 (setq! mouse-wheel-flip-direction t
        mouse-wheel-tilt-scroll t)
