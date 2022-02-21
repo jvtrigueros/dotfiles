@@ -141,9 +141,6 @@
 
 (use-package! just-mode)
 
-(after! good-scroll
-  (good-scroll-mode 1))
-
 ;; Allow scrolling sideways with the trackpad
 (setq! mouse-wheel-flip-direction t
        mouse-wheel-tilt-scroll t)
@@ -159,3 +156,5 @@
   (setq company-show-numbers t)
   (setq company-idle-delay 0))
 
+;; Enable Pixel Precision Scroll for Emacs 29+
+(add-hook 'text-mode-hook #'pixel-scroll-precision-mode)
