@@ -1,44 +1,16 @@
-dotfiles
-=======
+> dotfiles
 
-It seems like having a dotfiles repo is a good idea so I'm deciding to give it a shot. 
-At the moment I'm putting this together on Linux Mint, but really any Debian based distro
-should work.
+I tried to come up with a system to manage by dotfiles, but every attempt failed until now! I'm now using [`chezmoi`](https://github.com/twpayne/chezmoi) and it's fantastic! It seems like over engineering at first, but once you get the hang of it, it is straightforward and simple.
 
-For each of the sections below, there will be a corresponding folder. This way these can be called independently of each other, say for instance I want to _only_ symlink my configuration files into my home directory, but I don't need to install or set up anything else, then I would just call the script associated with the symlink folder.
+To install all my dotfiles in a new computer, there are some requirements:
 
-Setup
--------
+* [homebrew](https://brew.sh/), this works on both macOS and Linux
+* [git](https://git-scm.com/)
 
-There are some things that must be installed before we can even continue, here's the list:
+After that, simply run:
 
-* build-essential
-* git
+``` sh
+chezmoi init --apply https://github.com/jvtrigueros/dotfiles.git
+```
 
-Install
--------
-
-~~git~~
-oracle-java
-git
-z
-zsh
-
-Symlink
--------
-
-~~.gitconfig~~
-~~.vimrc~~
-
-alias
------
-
-Scratchpad
-----------
-
-CONFIG_PATH=$(cd "$(dirname "$0")" && pwd)
-
-clipit
-meld
-git extras
-    $ (cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install)
+Which will clone the repository and 
