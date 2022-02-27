@@ -36,8 +36,11 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^f' history-incremental-search-forward
 bindkey -s '^[OM' '^M' # This is a workaround for numkeypad: https://github.com/robbyrussell/oh-my-zsh/issues/2654
 
+# Exscape with jk
+bindkey -M viins 'jk' vi-cmd-mode
+
 # vi-mode mode change timeout to 0.1 seconds
-export KEYTIMEOUT=0.1
+export KEYTIMEOUT=10
 
 # History
 HISTSIZE=10000000
