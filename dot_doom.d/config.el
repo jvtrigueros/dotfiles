@@ -95,8 +95,6 @@
   (setq lsp-ui-doc-show-with-cursor nil)
   (setq lsp-ui-doc-show-with-mouse t))
 
-(add-hook 'clojure-mode-hook #'evil-cleverparens-mode)
-
 ;;   (setq! clojure-align-separator 'entire)
 ;;   (map! (:localleader
 ;;           (:map (clojure-mode-map clojurescript-mode-map)
@@ -114,6 +112,12 @@
   :after clojure-mode
   :config
   (set-lookup-handlers! 'clj-refactor-mode nil))
+
+(setq! evil-move-beyond-eol t
+       evil-cleverparens-use-s-and-S nil)
+
+(add-hook! '(clojure-mode-hook emacs-lisp-mode-hook)
+           #'evil-cleverparens-mode)
 
 ;; Load keys and certificates from auth-sources
 (setq auth-sources '("~/.authinfo"))
