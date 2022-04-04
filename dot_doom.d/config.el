@@ -73,7 +73,15 @@
 (after! magit
   (map!
    :map git-rebase-mode-map
-   "S-SPC" #'magit-diff-show-or-scroll-up))
+   "S-SPC" #'magit-diff-show-or-scroll-up)
+  (map!
+   :map magit-diff-section-base-map
+   "<s-return>" #'magit-diff-visit-file-other-window)
+  (map! :leader
+        (:prefix ("g" . "git")
+         (:prefix ("c" . "create")
+          :desc "Amend" "a" #'magit-commit-amend)
+         :desc "Push" "p" #'magit-push)))
 
 ;; Change default avy-keys to be DVORAK friendly
 (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
@@ -106,18 +114,6 @@
   :after clojure-mode
   :config
   (set-lookup-handlers! 'clj-refactor-mode nil))
-
-;; Add push git options
-(after! magit
-  (map! :leader
-        (:when (featurep! :tools magit)
-         (:prefix-map ("g" . "git")
-          :desc "Push" "p" #'magit-push
-          :desc "Amend" "a" #'magit-commit-amend)))
-  (map!
-   :after magit
-   :map magit-diff-section-base-map
-   "<S-return>" #'magit-diff-visit-file-other-window))
 
 ;; Load keys and certificates from auth-sources
 (setq auth-sources '("~/.authinfo"))
