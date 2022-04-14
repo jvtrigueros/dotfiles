@@ -6,6 +6,9 @@
   pager = delta
   excludesfile = ~/.gitignore_global
 
+[init]
+  defaultBranch = main
+
 [alias]
   serve = !git daemon --reuseaddr --verbose --base-path=. --enable=receive-pack --export-all ./.git
 
