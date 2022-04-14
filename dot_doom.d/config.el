@@ -118,6 +118,8 @@
 (add-hook! '(clojure-mode-hook emacs-lisp-mode-hook)
            #'evil-cleverparens-mode)
 
+(add-to-list 'auto-mode-alist '("\\.bb\\'" . clojure-mode))
+
 ;; Load keys and certificates from auth-sources
 (setq auth-sources '("~/.authinfo"))
 (setq network-stream-use-client-certificates t)
@@ -139,7 +141,6 @@
 (setq! langtool-bin "/home/linuxbrew/.linuxbrew/opt/languagetool/bin/languagetool")
 
 (use-package! just-mode)
-
 (use-package! chezmoi)
 
 ;; Allow scrolling sideways with the trackpad
