@@ -113,8 +113,7 @@
   :config
   (set-lookup-handlers! 'clj-refactor-mode nil))
 
-(setq! evil-move-beyond-eol t
-       evil-cleverparens-use-s-and-S nil)
+(setq! evil-cleverparens-use-s-and-S nil)
 
 (add-hook! '(clojure-mode-hook emacs-lisp-mode-hook)
            #'evil-cleverparens-mode)
