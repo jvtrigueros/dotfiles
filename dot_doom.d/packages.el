@@ -76,3 +76,5 @@
 (package! blamer)
 
 (package! graphql-mode)
+
+(package! restclient-jq)
