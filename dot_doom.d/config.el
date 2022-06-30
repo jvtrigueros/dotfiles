@@ -155,7 +155,7 @@
 ;; Configure TabNine
 (after! company
   (setq +lsp-company-backends '(company-tabnine :separate company-capf company-yasnippet))
-  (setq company-show-numbers t)
+  (setq company-show-quick-access t)
   (setq company-idle-delay 0))
 
 ;; Enable Pixel Precision Scroll for Emacs 29+
