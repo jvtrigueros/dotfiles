@@ -6,7 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export WSL_PATH=/home/linuxbrew/.linuxbrew/bin
-export PATH=$WSL_PATH:$HOME/.local/bin:$HOME/.pyenv/bin:/opt/homebrew/opt/grep/libexec/gnubin:$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/opt/libpq/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH
+export PATH=$HOME/.bin:$WSL_PATH:$HOME/.local/bin:$HOME/.pyenv/bin:/opt/homebrew/opt/grep/libexec/gnubin:$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/opt/libpq/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH
+export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"
 export PATH="$(pyenv root)/shims":$PATH
 export EDITOR=lvim
 export DISABLE_AUTO_TITLE=true
@@ -98,6 +99,6 @@ __init_fzf
 __init_sdkman
 
 # pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
+export PNPM_HOME="/home/jvtrigueros/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
