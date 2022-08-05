@@ -109,6 +109,6 @@ __init_fzf
 __init_sdkman
 
 # pnpm
-export PNPM_HOME="/home/jvtrigueros/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
