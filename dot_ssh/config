@@ -8,3 +8,7 @@ Host partum
   User ec2-user
   IdentityFile ~/workspace/scratch/ps/partum-simplex-backend.pem
 
+Host gdragon.gitlab.com
+  Hostname gitlab.com
+  IdentityFile ~/workspace/scratch/ps/id_rsa_gdragon
+
