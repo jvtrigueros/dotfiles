@@ -190,3 +190,6 @@
  lsp-disabled-clients '(tfls)
  lsp-terraform-ls-enable-show-reference t
  lsp-enable-links t)
+
+;; browse-at-remote configuration for Gerrit, this may ruin it for other repositories...
+(setq! browse-at-remote-append-path-to-host "/plugins/gitiles")
