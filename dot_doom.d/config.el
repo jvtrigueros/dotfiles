@@ -184,3 +184,9 @@
 
 ;; Add custom tags for lsp-yaml
 (setq! lsp-yaml-custom-tags ["!GetAtt" "!Split" "!ImportValue" "!Ref" "!Sub"])
+
+(setq!
+ ;; Disable the other terraform LSP client
+ lsp-disabled-clients '(tfls)
+ lsp-terraform-ls-enable-show-reference t
+ lsp-enable-links t)
