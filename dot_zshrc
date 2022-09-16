@@ -79,8 +79,7 @@ bindkey -M viins 'jk' vi-cmd-mode
 export KEYTIMEOUT=10
 
 # vi-mode insert -> |
-####################################################################################
-# export VI_MODE_SET_CURSOR=true
+export VI_MODE_SET_CURSOR=true
 
 ####################################
 # Configure shell history settings #
