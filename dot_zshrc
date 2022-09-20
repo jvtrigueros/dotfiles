@@ -75,6 +75,9 @@ bindkey -s '^[OM' '^M' # This is a workaround for numkeypad: https://github.com/
 # vi-mode Escape with jk
 bindkey -M viins 'jk' vi-cmd-mode
 
+# vi-mode edit command in Vim
+bindkey -M vicmd 've' edit-command-line
+
 # vi-mode mode change timeout to 0.1 seconds
 export KEYTIMEOUT=10
 
