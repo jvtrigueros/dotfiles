@@ -142,6 +142,18 @@
 
 (add-to-list 'auto-mode-alist '("\\.bb\\'" . clojure-mode))
 
+(use-package! kaocha-runner
+  :after cider
+  :config
+  (map! (:localleader
+         (:map (clojure-mode-map clojurescript-mode-map clojurec-mode-map)
+          (:prefix ("k" . "kaocha")
+           "t" #'kaocha-runner-run-test-at-point
+           "r" #'kaocha-runner-run-tests
+           "a" #'kaocha-runner-run-all-tests
+           "w" #'kaocha-runner-show-warnings
+           "h" #'kaocha-runner-hide-windows)))))
+
 ;; Load keys and certificates from auth-sources
 (setq auth-sources '("~/.authinfo"))
 (setq network-stream-use-client-certificates t)

@@ -81,4 +81,6 @@
   :recipe (:repo "jvtrigueros/browse-at-remote"
            :branch "custom-host-path"))
 
+(package! kaocha-runner)
+
 ;;;
