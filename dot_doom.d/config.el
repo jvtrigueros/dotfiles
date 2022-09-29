@@ -107,6 +107,7 @@
 
 ;; Change default avy-keys to be DVORAK friendly
 (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
+(setq avy-all-windows t)
 
 ;; Change Default Formatter for Clojure
 (setq-hook! 'clojure-mode-hook +format-with-lsp nil)
