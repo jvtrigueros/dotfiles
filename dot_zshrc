@@ -20,7 +20,7 @@ export BREW_PATH=/home/linuxbrew/.linuxbrew/bin
 export PATH=$HOME/.bin:$BREW_PATH:$HOME/.local/bin:$HOME/.pyenv/bin:/opt/homebrew/opt/grep/libexec/gnubin:$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/opt/libpq/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH
 export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"
 export PATH="$(pyenv root)/shims":$PATH
-export EDITOR=lvim
+export EDITOR=nvim
 export DISABLE_AUTO_TITLE=true
 
 export LC_ALL="en_US.UTF-8"
