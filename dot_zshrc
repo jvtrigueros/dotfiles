@@ -43,7 +43,6 @@ ZSH_DISABLE_COMPFIX="true"
 # Setup aliases #
 #################
 alias l='ls -G'
-alias rm='trash'
 alias serve='python -m SimpleHTTPServer'
 alias vim=$EDITOR
 
