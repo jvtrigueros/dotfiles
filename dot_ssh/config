@@ -12,3 +12,5 @@ Host gdragon.gitlab.com
   Hostname gitlab.com
   IdentityFile ~/workspace/scratch/ps/id_rsa_gdragon
 
+Host rocky
+  Hostname 23.160.160.234
