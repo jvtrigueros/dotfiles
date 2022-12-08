@@ -208,6 +208,3 @@
 ;; browse-at-remote configuration for Gerrit, this may ruin it for other repositories...
 (setq! browse-at-remote-append-path-to-host "/plugins/gitiles")
 
-(use-package! asdf.el
-  :config
-  (asdf-enable))

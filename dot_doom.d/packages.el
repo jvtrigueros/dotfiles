@@ -83,8 +83,4 @@
 
 (package! kaocha-runner)
 
-(package! asdf.el
-  :recipe (:host github
-           :repo "tabfugnic/asdf.el"))
-
 ;;;
