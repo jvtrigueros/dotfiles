@@ -208,3 +208,6 @@
 ;; browse-at-remote configuration for Gerrit, this may ruin it for other repositories...
 (setq! browse-at-remote-append-path-to-host "/plugins/gitiles")
 
+(when (not IS-MAC)
+  (use-package! vterm
+    :load-path  "~/.emacs.d/.local/straight/repos/emacs-libvterm"))
