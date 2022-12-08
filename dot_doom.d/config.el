@@ -211,3 +211,19 @@
 (when (not IS-MAC)
   (use-package! vterm
     :load-path  "~/.emacs.d/.local/straight/repos/emacs-libvterm"))
+
+;;;;;;;;;;;;;;;;;;;
+;; Custom Advice ;;
+;;;;;;;;;;;;;;;;;;;
+
+(defadvice!
+  evil-scroll-down-center (count)
+  "Centers the screen after scrolling down half a page, helps with disorientation."
+  :after #'evil-scroll-down
+  (evil-scroll-line-to-center count))
+
+(defadvice!
+  evil-scroll-up-center (count)
+  "Centers the screen after scrolling up half a page, helps with disorientation."
+  :after #'evil-scroll-up
+  (evil-scroll-line-to-center count))
