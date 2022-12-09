@@ -83,4 +83,15 @@
 
 (package! kaocha-runner)
 
+;;;;;;;;;;
+;; Ruby ;;
+;;;;;;;;;;
+
+;; Disable Ruby plugins, they don't really help
+(package! rubocop
+  :disable t)
+(package! robe
+  :disable t)
+(package! rake
+  :disable t)
 ;;;
