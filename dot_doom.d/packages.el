@@ -63,8 +63,6 @@
 
 (package! free-keys)
 
-(package! evil-cleverparens)
-
 (package! company-tabnine
           :recipe (:host github
                    :repo "TommyX12/company-tabnine"))
@@ -81,7 +79,13 @@
   :recipe (:repo "jvtrigueros/browse-at-remote"
            :branch "custom-host-path"))
 
+;;;;;;;;;;;;;
+;; Clojure ;;
+;;;;;;;;;;;;;
+
+(package! evil-cleverparens)
 (package! kaocha-runner)
+(package! html-to-hiccup)
 
 ;;;;;;;;;;
 ;; Ruby ;;
