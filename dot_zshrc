@@ -52,6 +52,9 @@ alias vim=$EDITOR
 # Install antidote, the zsh plugin manager, or clone antidote if necessary
 [[ -e ~/.antidote ]] || git clone https://github.com/mattmc3/antidote.git ~/.antidote
 
+# Use Friendly Names
+zstyle ':antidote:bundle' use-friendly-names 'yes'
+
 # source antidote
 . ~/.antidote/antidote.zsh
 
