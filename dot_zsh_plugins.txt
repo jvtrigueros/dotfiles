@@ -18,8 +18,7 @@ ohmyzsh/ohmyzsh path:plugins/tmux
 ohmyzsh/ohmyzsh path:plugins/vi-mode
 ohmyzsh/ohmyzsh path:plugins/zoxide
 
-zsh-users/zsh-syntax-highlighting
-# zsh-users/zsh-history-substring-search
+# z-shell/F-Sy-H # Syntax Highlighting
 
 # PowerLevel 10k https://github.com/romkatv/powerlevel10k
 romkatv/powerlevel10k
