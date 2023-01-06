@@ -58,9 +58,6 @@ alias vim=$EDITOR
 # generate and source plugins from ~/.zsh_plugins.txt
 antidote load
  
-# Load oh-my-zsh much later in the Initialization
-source ~/.zsh_plugins.zsh
-
 ##############################
 # Configure vi-mode settings #
 ##############################
