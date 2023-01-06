@@ -33,7 +33,6 @@ export PATH="$PNPM_HOME:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 
-ASDF_DIR=/usr/local/opt/asdf
 COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_UPDATE="true"
 ZSH_DISABLE_COMPFIX="true"
