@@ -1,5 +1,4 @@
 # antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-mafredri/zsh-async
 
 ohmyzsh/ohmyzsh
 # ohmyzsh/ohmyzsh path:plugins/command-not-found
@@ -24,7 +23,4 @@ zsh-users/zsh-syntax-highlighting
 
 # PowerLevel 10k https://github.com/romkatv/powerlevel10k
 romkatv/powerlevel10k
-
-# Pure Theme
-# sindresorhus/pure
 
