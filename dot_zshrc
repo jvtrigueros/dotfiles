@@ -41,6 +41,7 @@ ZSH_DISABLE_COMPFIX="true"
 #################
 # Setup aliases #
 #################
+
 alias l='ls -G'
 alias serve='python -m SimpleHTTPServer'
 alias vim=$EDITOR
@@ -112,12 +113,6 @@ then
   autoload -Uz compinit
   compinit
 fi
-
-############
-# Load NVM #
-############
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 ## bb completion
 _bb_tasks() {
