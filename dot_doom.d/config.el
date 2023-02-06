@@ -176,7 +176,10 @@
          (expand-file-name "ispell/jvtrigueros.pws" doom-data-dir)))
 
 ;; Specify location of Language Tool when installed with LinuxBrew
-(setq! langtool-bin "/home/linuxbrew/.linuxbrew/opt/languagetool/bin/languagetool")
+(if IS-MAC
+    (setq! langtool-http-server-host "localhost"
+           langtool-http-server-port 8081)
+  (setq! langtool-bin "/home/linuxbrew/.linuxbrew/opt/languagetool/bin/languagetool"))
 
 (use-package! just-mode)
 (use-package! chezmoi)
