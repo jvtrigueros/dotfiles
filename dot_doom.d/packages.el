@@ -92,6 +92,10 @@
 ;;;;;;;;;;
 
 ;; Disable Ruby plugins, they don't really help
+(package! bundler
+  :disable t)
+(package! minitest
+  :disable t)
 (package! rubocop
   :disable t)
 (package! robe
