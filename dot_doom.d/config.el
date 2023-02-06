@@ -141,7 +141,10 @@
 (add-hook! '(clojure-mode-hook emacs-lisp-mode-hook)
            #'evil-cleverparens-mode)
 
-(add-to-list 'auto-mode-alist '("\\.bb\\'" . clojure-mode))
+(setq auto-mode-alist
+      (append auto-mode-alist
+              '(("\\.bb\\'" . clojure-mode)
+                ("Jenkinsfile" . groovy-mode))))
 
 (use-package! kaocha-runner
   :after cider
