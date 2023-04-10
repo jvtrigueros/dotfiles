@@ -247,6 +247,26 @@
 
 (set-formatter! 'rufo "rufo" :modes '(ruby-mode) :ok-statuses '(0 3))
 
+(defun meraki/vterm-zeus-runner ()
+  "Insert ./script/zeus runner <filename>:<lineno> on vterm"
+  (interactive)
+  (require 'vterm)
+  (eval-when-compile (require 'subr-x))
+  (let* ((buf (current-buffer))
+         (filename (file-relative-name
+                    (buffer-file-name)
+                    (doom-project-root)))
+         (command (concat "./script/zeus runner " filename)))
+    (unless (get-buffer vterm-buffer-name)
+      (vterm))
+    (pop-to-buffer vterm-buffer-name)
+    (vterm--goto-line -1)
+    (message command)
+    (vterm-send-string command)
+    (vterm-send-return)
+    (pop-to-buffer buf)
+    (use-region-p)))
+
 (defun meraki/vterm-zeus-test ()
   "Insert ./script/zeus test <filename>:<lineno> on vterm"
   (interactive)
@@ -278,4 +298,5 @@
       :localleader
       :map ruby-mode-map
       :prefix ("z" . "zeus")
+      "r" #'meraki/vterm-zeus-runner
       "t" #'meraki/vterm-zeus-test)
