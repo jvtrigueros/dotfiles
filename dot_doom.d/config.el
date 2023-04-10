@@ -300,3 +300,9 @@
       :prefix ("z" . "zeus")
       "r" #'meraki/vterm-zeus-runner
       "t" #'meraki/vterm-zeus-test)
+
+(after! ruby-mode
+  (remove-hook 'ruby-mode-hook
+               #'rubocop-mode)
+  (add-to-list 'flycheck-disabled-checkers
+               'ruby-rubocop))
