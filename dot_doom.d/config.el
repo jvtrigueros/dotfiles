@@ -203,7 +203,7 @@
 (add-hook 'text-mode-hook #'pixel-scroll-precision-mode)
 
 ;; Add custom tags for lsp-yaml
-(setq! lsp-yaml-custom-tags ["!GetAtt" "!Split" "!ImportValue" "!Ref" "!Sub"])
+(setq! lsp-yaml-custom-tags ["!GetAtt" "!Split" "!ImportValue" "!Ref" "!Sub" "!reference"])
 
 (setq!
  ;; Disable the other terraform LSP client
