@@ -234,6 +234,13 @@
   :after #'evil-scroll-up
   (evil-scroll-line-to-center count))
 
+;;;;;;;;;;;;;;;;;;
+;; Custom Hooks ;;
+;;;;;;;;;;;;;;;;;;
+
+(add-hook! 'better-jumper-post-jump-hook
+  #'recenter)
+
 ;;;;;;;;;;
 ;; Ruby ;;
 ;;;;;;;;;;
