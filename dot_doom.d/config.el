@@ -22,8 +22,8 @@
 ;; accept. For example:
 ;;
 
-(setq doom-font (font-spec :family "FantasqueSansMono Nerd Font Mono" :size 16 :weight (if IS-MAC 'normal 'bold))
-      doom-variable-pitch-font (font-spec :family "FantasqueSansMono Nerd Font" :size 16))
+(setq doom-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 16 :weight (if IS-MAC 'normal 'bold))
+      doom-variable-pitch-font (font-spec :family "FantasqueSansM Nerd Font" :size 16))
 
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
