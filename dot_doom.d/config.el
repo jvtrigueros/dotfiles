@@ -144,7 +144,8 @@
 (setq auto-mode-alist
       (append auto-mode-alist
               '(("\\.bb\\'" . clojure-mode)
-                ("Jenkinsfile" . groovy-mode))))
+                ("Jenkinsfile" . groovy-mode)
+                ("\\.astro" . web-mode))))
 
 (use-package! kaocha-runner
   :after cider
