@@ -36,6 +36,10 @@
 ;; `load-theme' function. This is the default:
 ;; (setq doom-theme 'doom-nord-light)
 (setq doom-theme 'doom-dracula)
+(custom-theme-set-faces! 'doom-dracula
+  ;; Source: https://draculatheme.com/contribute#color-palette
+  (set-face-background 'hl-line "#44475a"))
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type nil)
