@@ -311,3 +311,10 @@
                #'rubocop-mode)
   (add-to-list 'flycheck-disabled-checkers
                'ruby-rubocop))
+
+;;;;;;;;;;;;;;;;;;
+;; workspace.el ;;
+;;;;;;;;;;;;;;;;;;
+
+(after! persp-mode
+  (setq persp-emacsclient-init-frame-behaviour-override "main"))
