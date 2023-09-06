@@ -1,0 +1,13 @@
+{{- $email := promptString "Which email should be used in templates" "j.v.trigueros@gmail.com" -}}
+{{- $location := promptChoice "Where will these dotfiles live" (list "personal" "personal-headless" "work" "work-headless") "personal" -}}
+[data]
+  email = "{{ $email }}"
+  location = "{{ $location }}"
+
+[diff]
+  command = "nvim"
+  args = ["-d", "{{ `{{` }} .Destination }}", "{{ `{{` }} .Target }}"]
+
+[merge]
+  command = "nvim"
+  args = ["-d", "{{ `{{` }} .Source }}", "{{ `{{` }} .Destination }}", "{{ `{{` }} .Target }}"]
