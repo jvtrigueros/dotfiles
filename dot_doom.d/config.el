@@ -247,60 +247,6 @@
 ;; Ruby ;;
 ;;;;;;;;;;
 
-(defun meraki/vterm-zeus-runner ()
-  "Insert ./script/zeus runner <filename>:<lineno> on vterm"
-  (interactive)
-  (require 'vterm)
-  (eval-when-compile (require 'subr-x))
-  (let* ((buf (current-buffer))
-         (filename (file-relative-name
-                    (buffer-file-name)
-                    (doom-project-root)))
-         (command (concat "./script/zeus runner " filename)))
-    (unless (get-buffer vterm-buffer-name)
-      (vterm))
-    (pop-to-buffer vterm-buffer-name)
-    (vterm--goto-line -1)
-    (message command)
-    (vterm-send-string command)
-    (vterm-send-return)
-    (pop-to-buffer buf)
-    (use-region-p)))
-
-(defun meraki/vterm-zeus-test ()
-  "Insert ./script/zeus test <filename>:<lineno> on vterm"
-  (interactive)
-  (require 'vterm)
-  (eval-when-compile (require 'subr-x))
-  (let* ((buf (current-buffer))
-         (filename (file-relative-name
-                    (if (rspec-buffer-is-spec-p)
-                        (buffer-file-name)
-                      (rspec-spec-file-for (buffer-file-name)))
-                    (doom-project-root)))
-         (lineno (when (and (rspec-buffer-is-spec-p)
-                            (region-active-p))
-                   (concat ":" (number-to-string (line-number-at-pos)))))
-         (command (concat "./script/zeus test " filename lineno)))
-    (unless (get-buffer vterm-buffer-name)
-      (vterm))
-    ;; (display-buffer vterm-buffer-name t)
-    ;; (switch-to-buffer-other-window vterm-buffer-name)
-    (pop-to-buffer vterm-buffer-name)
-    (vterm--goto-line -1)
-    (message command)
-    (vterm-send-string command)
-    (vterm-send-return)
-    (pop-to-buffer buf)
-    (use-region-p)))
-
-(map! :after ruby-mode
-      :localleader
-      :map ruby-mode-map
-      :prefix ("z" . "zeus")
-      "r" #'meraki/vterm-zeus-runner
-      "t" #'meraki/vterm-zeus-test)
-
 (after! ruby-mode
   (remove-hook 'ruby-mode-hook
                #'rubocop-mode)
