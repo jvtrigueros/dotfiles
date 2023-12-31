@@ -75,10 +75,6 @@
 
 (package! restclient-jq)
 
-(package! browse-at-remote
-  :recipe (:repo "jvtrigueros/browse-at-remote"
-           :branch "custom-host-path"))
-
 (package! topsy
   :recipe (:host github
            :repo "alphapapa/topsy.el"))
