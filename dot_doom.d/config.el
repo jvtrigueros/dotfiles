@@ -247,8 +247,6 @@
 ;; Ruby ;;
 ;;;;;;;;;;
 
-(set-formatter! 'rufo "rufo" :modes '(ruby-mode) :ok-statuses '(0 3))
-
 (defun meraki/vterm-zeus-runner ()
   "Insert ./script/zeus runner <filename>:<lineno> on vterm"
   (interactive)
