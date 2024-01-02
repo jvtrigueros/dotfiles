@@ -88,7 +88,7 @@
        :tools
        ;;ansible
        ;;biblio               ; Writes a PhD for you (citation needed)
-       ;;debugger             ; FIXME stepping through code, to help you add bugs
+       (debugger +lsp)             ; FIXME stepping through code, to help you add bugs
        direnv
        (docker +lsp)
        editorconfig           ; let someone else argue about tabs vs spaces
@@ -136,7 +136,7 @@
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
-       ;;(go +lsp)         ; the hipster dialect
+       (go +lsp)           ; the hipster dialect
        (graphql +lsp)      ; Give queries a REST
        ;;(haskell +lsp)    ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
@@ -166,7 +166,7 @@
        ;;rst               ; ReST in peace
        (ruby +rails +tree-sitter +lsp)       ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        ;;rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
-       ;;(scala +lsp)      ; java, but good
+       (scala +lsp)        ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
        sh                  ; she sells {ba,z,fi}sh shells on the C xor
        ;;sml
