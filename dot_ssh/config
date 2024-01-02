@@ -3,10 +3,6 @@ Host pawa.im
   User root
   Port 2016
 
-Host sakura
-  Hostname sakura.local
-  User jvtrigueros
-
 Host partum
   HostName 18.224.119.9
   User ec2-user
@@ -16,5 +12,5 @@ Host gdragon.gitlab.com
   Hostname gitlab.com
   IdentityFile ~/workspace/scratch/ps/id_rsa_gdragon
 
-Host rocky
+Host hostcram
   Hostname 23.160.160.234
