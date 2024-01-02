@@ -29,12 +29,16 @@ else
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-export LINUX_BREW_PATH=/home/linuxbrew/.linuxbrew/bin
-export PATH=$HOME/.bin:$LINUX_BREW_PATH:$HOME/.local/bin:$HOME/.pyenv/bin:$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$HOME/.bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/opt/libpq/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH
+export PATH=$HOME/.bin:$LINUX_BREW_PATH:$HOME/.local/bin:$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$HOME/.bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/opt/libpq/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH
 export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"
-export PATH="$(pyenv root)/shims":$PATH
 export EDITOR=nvim
 export DISABLE_AUTO_TITLE=true
+
+# pyenv
+if (( $+commands[pyenv] ));then
+  export PATH=$HOME/.pyenv/bin:"$(pyenv root)/shims":$PATH
+fi
+# pyenv end
 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
