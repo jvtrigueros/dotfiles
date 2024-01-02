@@ -20,7 +20,10 @@ fi
 # Setup environment variables #
 ###############################
 
-if [[ $(arch) == "i386" ]]; then
+export LINUX_BREW_PATH=/home/linuxbrew/.linuxbrew/bin
+if [[ $(uname -s) == Linux* ]];then
+  eval "$(${LINUX_BREW_PATH}/brew shellenv)"
+elif [[ $(arch) == "i386" ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
 else
   eval "$(/opt/homebrew/bin/brew shellenv)"
