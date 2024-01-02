@@ -14,3 +14,16 @@ Host gdragon.gitlab.com
 
 Host hostcram
   Hostname 23.160.160.234
+
+Host *.meraki.com
+  User jvtrig
+  ForwardAgent yes
+  ControlMaster auto
+  ControlPath ~/.ssh/%r@%h:%p.sock
+  ControlPersist yes
+  HostkeyAlgorithms +ssh-rsa
+  PubkeyAcceptedAlgorithms +ssh-rsa
+
+Host *.ikarem.io
+  HostkeyAlgorithms +ssh-rsa
+  PubkeyAcceptedAlgorithms +ssh-rsa
