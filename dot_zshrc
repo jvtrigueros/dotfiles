@@ -20,8 +20,14 @@ fi
 # Setup environment variables #
 ###############################
 
-export BREW_PATH=/home/linuxbrew/.linuxbrew/bin
-export PATH=$HOME/.bin:$BREW_PATH:$HOME/.local/bin:$HOME/.pyenv/bin:/opt/homebrew/opt/grep/libexec/gnubin:$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/opt/libpq/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH
+if [[ $(arch) == "i386" ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+else
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+export LINUX_BREW_PATH=/home/linuxbrew/.linuxbrew/bin
+export PATH=$HOME/.bin:$LINUX_BREW_PATH:$HOME/.local/bin:$HOME/.pyenv/bin:$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$HOME/.bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/opt/libpq/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH
 export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"
 export PATH="$(pyenv root)/shims":$PATH
 export EDITOR=nvim
