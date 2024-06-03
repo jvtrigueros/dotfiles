@@ -49,8 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! magit-delta)
-
 (package! super-save)
 
 (package! benchmark-init)

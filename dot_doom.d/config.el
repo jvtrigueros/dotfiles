@@ -245,9 +245,6 @@
 (add-hook! 'better-jumper-post-jump-hook
   #'recenter)
 
-(add-hook! 'magit-mode-hook
-  #'magit-delta-mode)
-
 ;;;;;;;;;;
 ;; Ruby ;;
 ;;;;;;;;;;
