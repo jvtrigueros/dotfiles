@@ -255,9 +255,11 @@
   (remove-hook 'ruby-mode-hook
                #'rubocop-mode)
   (add-to-list 'flycheck-disabled-checkers
-               'ruby-rubocop)
-  (setq-hook! 'ruby-mode-hook
-    +format-with-lsp nil))
+               'ruby-rubocop))
+
+(setq-hook! 'ruby-mode-hook
+  +format-with-lsp nil
+  +format-with 'rufo)
 
 ;;;;;;;;;;;;;;;;;;
 ;; workspace.el ;;
