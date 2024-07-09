@@ -94,6 +94,10 @@
         beacon-blink-when-buffer-changes t
         beacon-blink-when-point-moves-vertically 10))
 
+(defun jvt/magit-commit-amend ()
+  (interactive)
+  (magit-commit-amend '("-C" "HEAD")))
+
 (after! magit
   (map!
    :map git-rebase-mode-map
@@ -103,9 +107,9 @@
    "<s-return>" #'magit-diff-visit-file-other-window)
   (map! :leader
         (:prefix ("g" . "git")
-         (:prefix ("c" . "create")
-          :desc "Amend" "a" #'magit-commit-amend)
-         :desc "Push" "p" #'magit-push)))
+                 (:prefix ("c" . "create")
+                  :desc "Amend" "a" #'jvt/magit-commit-amend)
+                 :desc "Push" "p" #'magit-push)))
 
 ;; Change default avy-keys to be DVORAK friendly
 (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
