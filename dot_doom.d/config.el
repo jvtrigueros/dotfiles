@@ -189,7 +189,9 @@
   (setq! langtool-bin "/home/linuxbrew/.linuxbrew/opt/languagetool/bin/languagetool"))
 
 (use-package! just-mode)
-(use-package! chezmoi)
+(use-package! chezmoi
+  :config
+  (setq chezmoi-command "chezmoi --use-builtin-diff"))
 
 ;; Allow scrolling sideways with the trackpad
 (setq! mouse-wheel-flip-direction t
