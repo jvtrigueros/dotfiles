@@ -183,7 +183,7 @@
          (expand-file-name "ispell/jvtrigueros.pws" doom-data-dir)))
 
 ;; Specify location of Language Tool when installed with LinuxBrew
-(if IS-MAC
+(if (featurep :system 'macos)
     (setq! langtool-http-server-host "localhost"
            langtool-http-server-port 8081)
   (setq! langtool-bin "/home/linuxbrew/.linuxbrew/opt/languagetool/bin/languagetool"))
@@ -220,7 +220,7 @@
  lsp-terraform-ls-enable-show-reference t
  lsp-enable-links t)
 
-(when (not IS-MAC)
+(when (not (featurep :system 'macos))
   (use-package! vterm
     :load-path  "~/.emacs.d/.local/straight/repos/emacs-libvterm"))
 
