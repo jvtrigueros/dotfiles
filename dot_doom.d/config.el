@@ -232,13 +232,13 @@
   evil-scroll-down-center (count)
   "Centers the screen after scrolling down half a page, helps with disorientation."
   :after #'evil-scroll-down
-  (evil-scroll-line-to-center count))
+  (evil-window-middle))
 
 (defadvice!
   evil-scroll-up-center (count)
   "Centers the screen after scrolling up half a page, helps with disorientation."
   :after #'evil-scroll-up
-  (evil-scroll-line-to-center count))
+  (evil-window-middle))
 
 ;;;;;;;;;;;;;;;;;;
 ;; Custom Hooks ;;
