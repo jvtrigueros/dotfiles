@@ -38,10 +38,6 @@
 (setq doom-theme 'doom-dracula)
 (custom-theme-set-faces! 'doom-dracula)
 
-;; Source: https://draculatheme.com/contribute#color-palette
-;; TODO: No longer working, please fix
-; (set-face-background 'hl-line "#44475a")
-
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type nil)
