@@ -34,6 +34,9 @@ export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"
 export EDITOR=nvim
 export DISABLE_AUTO_TITLE=true
 
+# emacs-lsp-booster, plists for desearialization
+export LSP_USE_PLISTS=true
+
 # pyenv
 if (( $+commands[pyenv] ));then
   export PATH=$HOME/.pyenv/bin:"$(pyenv root)/shims":$PATH
@@ -48,12 +51,9 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-export NVM_DIR="$HOME/.nvm"
-
 COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_UPDATE="true"
 ZSH_DISABLE_COMPFIX="true"
-# ZSH="$(antidote home)/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh"
 
 #################
 # Setup aliases #
@@ -78,6 +78,9 @@ zstyle ':antidote:bundle' use-friendly-names 'yes'
 
 # generate and source plugins from ~/.zsh_plugins.txt
 antidote load
+
+# load Powerlevel10k theme manually
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
  
 ##############################
 # Configure vi-mode settings #
@@ -152,5 +155,3 @@ __init_fzf() {
 
 __init_fzf
 __init_sdkman
-
-# _evalcache direnv hook zsh
