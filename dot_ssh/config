@@ -1,7 +1,5 @@
 Host pawa.im
-  HostName 185.198.26.34
-  User root
-  Port 2016
+  HostName 23.160.160.234
 
 Host partum
   HostName 18.224.119.9
