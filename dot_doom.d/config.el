@@ -115,15 +115,16 @@
 (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
 (setq avy-all-windows t)
 
-;; Change Default Formatter for Clojure
-(setq-hook! 'clojure-mode-hook +format-with-lsp nil)
-(set-formatter! 'cljstyle "cljstyle pipe" :modes '(clojure-mode))
-
 (after! clojure-mode
   ;; Disable documentation pop, can still be summoned with M-x lsp-ui-doc-show
   (setq lsp-ui-doc-show-with-cursor nil)
-  (setq lsp-ui-doc-show-with-mouse t))
+  (setq lsp-ui-doc-show-with-mouse t)
 
+  ;; Change Default Formatter for Clojure
+  (set-formatter! 'cljstyle '("cljstyle" "pipe") :modes '(clojure-mode))
+  (setq-hook! 'clojure-mode-hook
+    +format-with-lsp nil
+    +format-with 'cljstyle))
 ;;   (setq! clojure-align-separator 'entire)
 ;;   (map! (:localleader
 ;;           (:map (clojure-mode-map clojurescript-mode-map)
