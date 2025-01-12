@@ -262,3 +262,11 @@
 
 (after! persp-mode
   (setq persp-emacsclient-init-frame-behaviour-override "main"))
+
+;;;;;;;;;;;;;;;;;;
+;; company-mode ;;
+;;;;;;;;;;;;;;;;;;
+
+(add-hook! 'company-box-mode-hook
+  (setq company-frontends
+        '(company-tng-frontend company-box-frontend)))
