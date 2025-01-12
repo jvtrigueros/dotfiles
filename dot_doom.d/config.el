@@ -202,12 +202,6 @@
  json-mode-hook
  (setq! js-indent-level 2))
 
-;; Configure TabNine
-(after! company
-  (setq +lsp-company-backends '(company-tabnine :separate company-capf company-yasnippet))
-  (setq company-show-quick-access t)
-  (setq company-idle-delay 0))
-
 ;; Enable Pixel Precision Scroll for Emacs 29+
 (add-hook 'text-mode-hook #'pixel-scroll-precision-mode)
 
