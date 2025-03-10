@@ -1,5 +1,8 @@
 Host pawa.im
   HostName 23.160.160.234
+  ControlMaster auto
+  ControlPath ~/.ssh/pawa/%r@%h:%p
+  ControlPersist 1h
 
 Host partum
   HostName 18.224.119.9
@@ -10,8 +13,9 @@ Host gdragon.gitlab.com
   Hostname gitlab.com
   IdentityFile ~/workspace/scratch/ps/id_rsa_gdragon
 
-Host hostcram
-  Hostname 23.160.160.234
+Host lynnwoodtowing
+  Hostname 107.172.31.170
+  User root
 
 Host *.meraki.com
   User jvtrig
