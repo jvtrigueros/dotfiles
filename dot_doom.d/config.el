@@ -203,9 +203,6 @@
  json-mode-hook
  (setq! js-indent-level 2))
 
-;; Enable Pixel Precision Scroll for Emacs 29+
-(add-hook 'text-mode-hook #'pixel-scroll-precision-mode)
-
 ;; Add custom tags for lsp-yaml
 (setq! lsp-yaml-custom-tags ["!GetAtt" "!Split" "!ImportValue" "!Ref" "!Sub" "!reference"])
 
