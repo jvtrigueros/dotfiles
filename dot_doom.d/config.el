@@ -307,6 +307,20 @@
 
 (add-hook 'python-mode-hook #'mise-mode)
 
+;;;;;;;;;;;;
+;; lookup ;;
+;;;;;;;;;;;;
+
+(after! dumb-jump
+  (setq +lookup-definition-functions
+        '(+lookup-dictionary-definition-backend-fn
+          +lookup-xref-definitions-backend-fn
+          +lookup-project-search-backend-fn
+          +lookup-evil-goto-definition-backend-fn))
+  (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
+
+(use-package! rsync-mode)
+
 (use-package! ultra-scroll
   :init
   (setq scroll-conservatively 101

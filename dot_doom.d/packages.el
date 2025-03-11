@@ -105,6 +105,10 @@
   (package! ts-fold :pin "c3da5520b988720f7f6e9e5e11b60746598112e0"
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")))
 
+(package! rsync-mode
+  :recipe (:host github
+           :repo "r-zip/rsync-mode"))
+
 (package! ultra-scroll
   :recipe (:host github
            :repo "jdtsmith/ultra-scroll"))
