@@ -73,6 +73,10 @@
   :recipe (:host github
            :repo "alphapapa/topsy.el"))
 
+(package! mise
+  :recipe (:host github
+           :repo "liuyinz/mise.el"))
+
 ;;;;;;;;;;;;;
 ;; Clojure ;;
 ;;;;;;;;;;;;;

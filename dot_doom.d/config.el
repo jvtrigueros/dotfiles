@@ -301,6 +301,12 @@
   (setq company-frontends
         '(company-tng-frontend company-box-frontend)))
 
+;;;;;;;;;;;;
+;; python ;;
+;;;;;;;;;;;;
+
+(add-hook 'python-mode-hook #'mise-mode)
+
 (use-package! ultra-scroll
   :init
   (setq scroll-conservatively 101
