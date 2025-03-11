@@ -267,3 +267,10 @@
 (add-hook! 'company-box-mode-hook
   (setq company-frontends
         '(company-tng-frontend company-box-frontend)))
+
+(use-package! ultra-scroll
+  :init
+  (setq scroll-conservatively 101
+        scroll-margin 0)
+  :config
+  (ultra-scroll-mode 1))

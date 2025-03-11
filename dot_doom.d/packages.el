@@ -100,4 +100,8 @@
 (when (modulep! :tools tree-sitter)
   (package! ts-fold :pin "c3da5520b988720f7f6e9e5e11b60746598112e0"
     :recipe (:host github :repo "emacs-tree-sitter/ts-fold")))
+
+(package! ultra-scroll
+  :recipe (:host github
+           :repo "jdtsmith/ultra-scroll"))
 ;;;
