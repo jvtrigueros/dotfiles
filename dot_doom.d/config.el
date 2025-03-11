@@ -279,11 +279,8 @@
 ;; Ruby ;;
 ;;;;;;;;;;
 
-(after! ruby-mode
-  (remove-hook 'ruby-mode-hook
-               #'rubocop-mode)
-  (add-to-list 'flycheck-disabled-checkers
-               'ruby-rubocop))
+(remove-hook 'ruby-mode-hook #'rubocop-mode)
+(add-to-list 'flycheck-disabled-checkers 'ruby-rubocop)
 
 (setq-hook! 'ruby-mode-hook
   +format-with-lsp nil
