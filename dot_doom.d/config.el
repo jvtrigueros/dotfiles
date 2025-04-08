@@ -327,3 +327,11 @@
         scroll-margin 0)
   :config
   (ultra-scroll-mode 1))
+
+;;;;;;;;;;;;;;;;;
+;; evil-escape ;;
+;;;;;;;;;;;;;;;;;
+
+(after! evil-escape
+  (setq evil-escape-key-sequence "jk"))
+
