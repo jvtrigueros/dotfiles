@@ -248,10 +248,6 @@
         orig-result)))
   (advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command))
 
-(when (not (featurep :system 'macos))
-  (use-package! vterm
-    :load-path  "~/.emacs.d/.local/straight/repos/emacs-libvterm"))
-
 ;;;;;;;;;;;;;;;;;;;
 ;; Custom Advice ;;
 ;;;;;;;;;;;;;;;;;;;
