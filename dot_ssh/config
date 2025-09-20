@@ -1,12 +1,12 @@
 Host pawa.im
-  HostName 23.160.160.234
+  HostName 23.166.40.16
   ControlMaster auto
   ControlPath ~/.ssh/pawa/%r@%h:%p
   ControlPersist 1h
 
 Host partum
-  HostName 18.224.119.9
-  User ec2-user
+  HostName ec2-18-224-119-9.us-east-2.compute.amazonaws.com
+  User onaire
   IdentityFile ~/workspace/scratch/ps/partum-simplex-backend.pem
 
 Host gdragon.gitlab.com
