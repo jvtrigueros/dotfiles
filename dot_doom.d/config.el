@@ -297,11 +297,14 @@
   (setq company-frontends
         '(company-tng-frontend company-box-frontend)))
 
-;;;;;;;;;;;;
-;; python ;;
-;;;;;;;;;;;;
 
-(add-hook 'python-mode-hook #'mise-mode)
+;;;;;;;;;;
+;; mise ;;
+;;;;;;;;;;
+
+(when (executable-find "mise")
+  (use-package! mise
+    :hook (after-init . global-mise-mode)))
 
 ;;;;;;;;;;;;
 ;; lookup ;;
