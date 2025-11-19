@@ -145,7 +145,8 @@
        (javascript +lsp    ; all(hope(abandon(ye(who(enter(here))))))
                    +tree-sitter)
        ;;julia             ; a better, faster MATLAB
-       ;;kotlin            ; a better, slicker Java(Script)
+       (kotlin +lsp        ; a better, slicker Java(Script)
+               +tree-sitter)
        ;;latex             ; writing papers in Emacs has never been so fun
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
