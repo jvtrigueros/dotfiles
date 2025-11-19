@@ -74,6 +74,7 @@
        (dired +icons +ranger) ; making dired pretty [functional]
        electric               ; smarter, keyword-based electric-indent
        (ibuffer +icons)       ; interactive buffer management
+       tramp                  ; remote files at your arthritic fingertips
        undo                   ; persistent, smarter undo for your inevitable mistakes
        vc                     ; version-control and Emacs, sitting in a tree
 
