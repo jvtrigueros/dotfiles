@@ -14,9 +14,6 @@ ohmyzsh/ohmyzsh path:plugins/tmux
 ohmyzsh/ohmyzsh path:plugins/vi-mode
 ohmyzsh/ohmyzsh path:plugins/zoxide
 
-# Cache Eval Commands
-# mroth/evalcache
-
 # Syntax Highlighting
 z-shell/F-Sy-H
 
