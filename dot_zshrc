@@ -144,16 +144,9 @@ _bb_tasks() {
 }
 compdef _bb_tasks bb
 
-__init_sdkman() {
-  ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-  export SDKMAN_DIR="$HOME/.sdkman"
-  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-}
-
 __init_fzf() {
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
   export FZF_DEFAULT_COMMAND='rg --files --hidden'
 }
 
 __init_fzf
-__init_sdkman
