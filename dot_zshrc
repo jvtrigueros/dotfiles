@@ -36,12 +36,6 @@ export EDITOR=nvim
 # emacs-lsp-booster, plists for desearialization
 export LSP_USE_PLISTS=true
 
-# pyenv
-if (( $+commands[pyenv] ));then
-  export PATH=$HOME/.pyenv/bin:"$(pyenv root)/shims":$PATH
-fi
-# pyenv end
-
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
