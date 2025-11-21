@@ -32,7 +32,6 @@ fi
 export PATH=$HOME/.bin:$LINUX_BREW_PATH:$HOME/.local/bin:$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$HOME/.bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/opt/libpq/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH
 export PATH="/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH"
 export EDITOR=nvim
-export DISABLE_AUTO_TITLE=true
 
 # emacs-lsp-booster, plists for desearialization
 export LSP_USE_PLISTS=true
@@ -51,8 +50,17 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+#############
+# Oh-My-Zsh #
+#############
+
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings/067cf4e22fdf9d4e0d7df920cdd3166ec16ae657#disable_auto_title
+DISABLE_AUTO_TITLE="true"
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings/067cf4e22fdf9d4e0d7df920cdd3166ec16ae657#completion_waiting_dots
 COMPLETION_WAITING_DOTS="true"
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings/067cf4e22fdf9d4e0d7df920cdd3166ec16ae657#disable_auto_update
 DISABLE_AUTO_UPDATE="true"
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings/067cf4e22fdf9d4e0d7df920cdd3166ec16ae657#zsh_disable_compfix
 ZSH_DISABLE_COMPFIX="true"
 
 #################
