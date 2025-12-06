@@ -5,9 +5,4 @@
   location = "{{ $location }}"
 
 [diff]
-  command = "nvim"
-  args = ["-d", "{{ `{{` }} .Destination }}", "{{ `{{` }} .Target }}"]
-
-[merge]
-  command = "nvim"
-  args = ["-d", "{{ `{{` }} .Source }}", "{{ `{{` }} .Destination }}", "{{ `{{` }} .Target }}"]
+  pager = "delta"
